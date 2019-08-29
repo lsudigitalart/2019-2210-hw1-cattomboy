@@ -18,10 +18,16 @@ function draw() {
   ellipse(5,8,60,60);
   fill(b);
 	for (x;x <= 110;x){
-	 x = x + 10;
-	 y = y + 10;
-	 ellipse(x * 4,y * 4,60,60);
-	 fill(w);
+		if (random(1,10) <= 5) 
+		{
+			fill(b);
+			stroke(color(255,255,255));
+		}
+		x = x + 10;
+		y = y + 10;
+		ellipse(x * 4,y * 4,60,60);
+		fill(w);
+		stroke(color(0,0,0));
   }
   x = 500;
   y = 0;
@@ -30,12 +36,14 @@ function draw() {
 		if (random(1,10) <= 5) 
 		{
 			fill(b);
+			stroke(color(255,255,255));
 		}
 		
 		ellipse(x ,y * 4,60,60);
 		x = x - 30;
 		y = y + 10;
 		fill(w);
+		stroke(color(0,0,0));
 	
 	}
 
